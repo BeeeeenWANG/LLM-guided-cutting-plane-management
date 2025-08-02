@@ -17,15 +17,15 @@ from utils import advanced_cut_feature_generator, compute_normalized_violation_s
 logger = logging.getLogger(__name__)
 
 # 国内API接口
-# API_KEY = "sk-aacsjwbslmzarphddbhhupmyxtmycrxnidyinvxoleybgcld"
-API_KEY = "sk-ctoowrguzjggztifabtbbonkhjtyprzesyrsuwdxyoffpfyz"
-MODEL_NAME = "Qwen/Qwen3-8B"  # "Qwen/Qwen3-30B-A3B"#"Qwen/Qwen3-8B"
-API_URL = "https://api.siliconflow.cn/v1/chat/completions"
+# API_KEY = ""
+API_KEY = ""
+MODEL_NAME = "" 
+API_URL = ""
 
 # 国外API接口
-API_KEY_ABO = "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"
-MODEL_NAME_ABO = "openai/gpt-4o"  # "google/gemini-2.5-flash"
-API_URL_ABO = "https://openrouter.ai/api/v1/chat/completions"
+API_KEY_ABO = ""
+MODEL_NAME_ABO = ""  # "google/gemini-2.5-flash"
+API_URL_ABO = ""
 global_llm_time, global_cut_num = [], []
 
 
@@ -301,8 +301,8 @@ class llmClient():
 
     def __init__(self,
                  api_key,
-                 model_name="Qwen/Qwen3-30B-A3B",
-                 api_url="https://api.siliconflow.cn/v1/chat/completions",
+                 model_name="",
+                 api_url="",
                  stream=False,
                  max_tokens=4096,
                  enable_thinking=False,
@@ -408,9 +408,9 @@ from openai import OpenAI
 
 # class QwenClient:
 #     def __init__(self,
-#                  api_key="sk-b300fa60ac03467aa2383c4459a89726",
-#                  model_name="qwen2.5-math-72b-instruct",
-#                  base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+#                  api_key="",
+#                  model_name="",
+#                  base_url="",
 #                  system_prompt="You are a helpful assistant.",
 #                  temperature=0.7,
 #                  top_p=0.8,
@@ -457,9 +457,9 @@ from openai import OpenAI
 # class QwenClient:
 #     #使用QWEN官方提供的链接api
 #     def __init__(self,
-#                  api_key='sk-b300fa60ac03467aa2383c4459a89726',
+#                  api_key='',
 #                  model_name="qwen-max",
-#                  api_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+#                  api_url="",
 #                  temperature=0.7,
 #                  top_p=0.8,
 #                  max_tokens=2048):
@@ -633,3 +633,4 @@ class CutSelectEfficacy(Cutsel):
             'nselectedcuts': num_select,
             'result': SCIP_RESULT.SUCCESS
         }
+
