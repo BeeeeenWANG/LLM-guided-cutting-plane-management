@@ -10,8 +10,10 @@ We propose a novel method for adaptive separator configuration and cut selection
   - tqdm
   - requests
 - Solver dependencies
-    - SCIP 8.0.0
-    - PySCIPOpt 4.1.0 (DIY), please refer to https://gitee.com/wang-zhihai/py-scipopt_-hem_-iclr2023
+  - SCIP 8.0.0
+  - PySCIPOpt 4.1.0 (DIY), please refer to https://gitee.com/wang-zhihai/py-scipopt_-hem_-iclr2023
+- API Application
+  - We have applied for large language model APIs on https://cloud.siliconflow.cn/ and https://openrouter.ai/. Please apply before running the code.  
  
 ## Running the Code
   ```bash
