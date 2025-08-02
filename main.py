@@ -1,7 +1,6 @@
 import json
 import requests
 from pyscipopt import Model
-# from test_api_with_scip import CutSelAgent
 from tools import CutSelAgent, CutSelRandom, CutSelectNormalizedViolation, CutSelectEfficacy
 import numpy as np
 import pandas as pd
@@ -16,15 +15,15 @@ import argparse
 # sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 #国内API接口
-API_KEY = "sk-ctoowrguzjggztifabtbbonkhjtyprzesyrsuwdxyoffpfyz" #"sk-aacsjwbslmzarphddbhhupmyxtmycrxnidyinvxoleybgcld"
-MODEL_NAME = "Qwen/Qwen3-30B-A3B"
-API_URL = "https://api.siliconflow.cn/v1/chat/completions"
+API_KEY = ""
+MODEL_NAME = ""
+API_URL = ""
 
 #国外API接口
-# API_KEY_ABO = "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"
-API_KEY_ABO = "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"
-MODEL_NAME_ABO = "openai/gpt-4o"
-API_URL_ABO = "https://openrouter.ai/api/v1/chat/completions"
+# API_KEY_ABO = ""
+API_KEY_ABO = ""
+MODEL_NAME_ABO = ""
+API_URL_ABO = ""
 
 time_list = []
 gap_list = []
@@ -248,8 +247,6 @@ def solve_lp_with_ai_optimization(lp_file, problem_type):
 
         cut_selector = CutSelAgent(
             scip_model=model,
-            # api_key="sk-aacsjwbslmzarphddbhhupmyxtmycrxnidyinvxoleybgcld",
-            # api_key="sk-ctoowrguzjggztifabtbbonkhjtyprzesyrsuwdxyoffpfyz",
             model_name=MODEL_NAME_ABO,
             api_url=API_URL_ABO,
             api_key=API_KEY_ABO,
@@ -462,7 +459,7 @@ def solve_lp_with_random_scip(lp_file):
 
         # cut_selector = CutSelAgent(
         #     scip_model=model,
-        #     api_key="sk-ctoowrguzjggztifabtbbonkhjtyprzesyrsuwdxyoffpfyz",
+        #     api_key="",
         #     sel_cuts_percent=0.1
         # )
         # model.includeCutsel(cut_selector, "LLMCutSelector",
@@ -695,4 +692,5 @@ if __name__ == "__main__":
     #     'PDI': primalDualIntegral_list,
     #     'Time': time_list
     # })
+
     # df.to_csv('llm_comb_result.csv',index=False,encoding='utf-8')
