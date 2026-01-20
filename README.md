@@ -1,7 +1,7 @@
 # LLM-guided-cutting-plane-management
 
 ## Project Description
-This repository contains the official implementation for the paper: **LLM-guided Cutting-planes Management for Mixed-integer Linear Programming**.  
+This repository contains the official implementation for the paper: **LLM-guided Cutting-plane Management for Mixed-integer Linear Programming**.  
 We propose a novel method for adaptive separator configuration and cut selection in MILP solving using large language models (LLMs). Our approach leverages instance-specific structural characteristics to activate effective separators and select high-quality cuts, achieving significant performance improvements over heuristic-based and existing learning-based methods across five MILP problem classes.
 
 ## Requirements
